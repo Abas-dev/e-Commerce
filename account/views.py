@@ -43,7 +43,7 @@ class RegisterPage(CreateView):
             messages.success(request, 'your account has been created successfully')
             return redirect('auth:login')
 
-class LogoutView(LogoutView):
+class LogoutView(LoginRequiredMixin,LogoutView):
     next_page = 'auth:login'
 
     def dispatch(self, request, *args, **kwargs):
