@@ -1,6 +1,7 @@
 #in this application, i will be using classbase views for majority or all of the views 
 
 from django.views.generic import TemplateView
+from django.views.generic import CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 class HomePageView(LoginRequiredMixin,TemplateView):
